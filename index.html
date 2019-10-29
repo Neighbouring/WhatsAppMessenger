@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Send Message using WhatsApp API</title>
+</head>
+
+
+<body>
+
+    <a id="whatsapp"></a>    
+    
+</body>
+
+<script>
+
+    var meunome = "Jose";
+    var contato = "Maria";
+    var ddi = "55";
+    var ddd = "11";
+    var telefone = "999999999";
+
+    document.getElementById("whatsapp").innerHTML = 
+    '<a href="https://api.whatsapp.com/send?phone='
+    + ddi
+    + ddd
+    + telefone
+    
+    // Saudação (Greetings)
+    + '&text=Olá, '
+    + contato
+    + '!'
+
+    // Quebra de linha (Brakeline)
+    + '%0A%0A'
+
+    //  Informar nome concatenado na mensagem (name concatenation at message)
+    + 'Sou '
+    + meunome
+
+    // Mensagem (Message)
+    + ' e gostaria de te convidar para participar do nosso evento.'
+    + "%0A"
+    + 'Neste ano teremos boas ofertas e gostaríamos que você não perdesse nenhuma oportunidade.'
+    + "%0A%0A"
+    + 'Até mais!"'
+
+    // Fim da API com ativação por link (API end with link activation)
+    + 'target="_blank">CLIQUE AQUI PARA ENVIAR</a>';
+
+</script>
+
+</html>
